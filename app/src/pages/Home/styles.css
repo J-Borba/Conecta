@@ -1,0 +1,117 @@
+.socials-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.38rem;
+}
+.socials-wrapper a {
+  height: 1.2rem;
+}
+.section-1 {
+  background: url('../../assets/background-first-section.jpg');
+  background-size: cover;
+  min-height: 100svh;
+  flex-shrink: 0;
+}
+.section-1-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+}
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 5.5rem 10rem;
+}
+.section-2-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.section-2-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 4.81rem;
+}
+.section-2-cards-container button {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+}
+.cards-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13.0625rem;
+  height: 18.125rem;
+}
+.Lata1 {
+  width: 20.375rem;
+  height: 35.875rem;
+  flex-shrink: 0;
+}
+.Lata2 {
+  width: 8.8125rem;
+  height: 15.125rem;
+}
+.Garrafa1 {
+  width: 13.0625rem;
+  height: 18.125rem;
+}
+
+@media only screen and (max-width:1168px) {
+  h1 {
+    font-size: 3rem;
+    width: 20.8125rem;
+  }
+  .section-1-wrapper {
+    gap: 3.38rem;
+  }
+  .Lata1 {
+    width: 18.5rem;
+    height: 32.625rem;
+  }
+  .section-2 {
+    padding: 5.5rem 1rem;
+  }
+  .section-2-cards-container{
+    gap: 1.9rem;
+  }
+}
+@media only screen and (max-width:680px) {
+  h1 {
+    font-size: 2.375rem;
+    width: 20.8125rem;
+  }
+  .section-1-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .section-1-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    margin: 0;
+  }
+  .section-1-cta-wrapper button {
+    width: 20.4375rem;
+    margin: 0;
+  }
+  .Lata1 {
+    width: 13.25rem;
+    height: 23.25rem;
+  }
+  .section-2-cards-container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .section-2-title-container p {
+    width: 17.5rem;
+  }
+}
