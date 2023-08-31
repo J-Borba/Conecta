@@ -1,10 +1,12 @@
 import { Header } from "../../components/Header";
-import ConectaLogo from '../../assets/marca-conecta-header.svg'
-import FacebookIcon from '../../assets/facebook.svg'
-import InstagramIcon from '../../assets/instagram.svg'
-import Lata1 from '../../assets/lata-1.png'
-import Lata2 from '../../assets/lata-2.png'
-import Garrafa1 from '../../assets/garrafa-1.png'
+import ConectaLogo from '../../assets/svgs/marca-conecta-header.svg'
+import FacebookIcon from '../../assets/svgs/facebook.svg'
+import InstagramIcon from '../../assets/svgs/instagram.svg'
+import CarrouselSVG from '../../assets/svgs/carrousel.svg'
+import Lata1 from '../../assets/latas/lata-1.png'
+import Lata2 from '../../assets/latas/lata-2.png'
+import Garrafa1 from '../../assets/garrafas/garrafa-1.png'
+import GridBar from '../../assets/grid/grid-bar-img.png'
 import './styles.css'
 import { MyButton } from "../../components/MyButton";
 import { Card } from "../../components/Card";
@@ -39,7 +41,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       <section className="section-2">
           <div className="section-2-title-container">
             <h4>
@@ -54,7 +55,7 @@ function Home() {
             <Card>
               <div className="cards-img-container">
                 <img src={Garrafa1} alt="Garrafa1" className="Garrafa1"/>
-              </div>
+          </div>
               <h4>Garrafa 350ml</h4>
               <p>Lorem ipsum dolor sit amet</p>
               <MyButton className="primary">Aqui um CTA</MyButton>
@@ -70,7 +71,19 @@ function Home() {
           </div>
 
           <div className="section-2-grid-container">
-
+            <div className="grid-larger"></div>
+            <div className="grid-bar">
+              <div className="grid-opacity-cover"></div>
+              <p>Peça para seu bar</p>
+              <img src={GridBar} alt="" />
+            </div>
+            <div className="grid-carrousel">
+              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo hendrerit.”</p>
+              <p>@danielmaciel</p>
+              <div className="grid-svg-container">
+                <img src={CarrouselSVG} alt="" />
+              </div>
+            </div>
           </div>
 
       </section>
