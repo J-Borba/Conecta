@@ -9,6 +9,7 @@ import Lata2 from '../../assets/latas/lata-2.png'
 import Lata3 from '../../assets/latas/lata-3.png'
 import Lata4 from '../../assets/latas/lata-4.png'
 import Lata5 from '../../assets/latas/lata-5.png'
+import Lata4Section3 from '../../assets/latas/lata-4-section-3.png'
 import Garrafa1 from '../../assets/garrafas/garrafa-1.png'
 import GridBar from '../../assets/grid/grid-bar-img.png'
 import './styles.scss'
@@ -46,6 +47,7 @@ function Home() {
           </div>
         </div>
       </section>
+
       <section className="section-2">
           <div className="section-2-title-container">
             <h4>
@@ -92,9 +94,15 @@ function Home() {
           </div>
 
       </section>
+
       <section className="section-3">
-        <h4>Quer experimentar?</h4>
-        <MyButton className="secondary">Aqui um CTA</MyButton>
+        <div className="Lata4Mobile">
+          <img src={Lata4Section3} alt="" />
+        </div>
+        <div className="mobile-wrapper">
+          <h4>Quer experimentar?</h4>
+          <MyButton className="secondary">Aqui um CTA</MyButton>
+        </div>
         <div className="Lata3">
           <img src={Lata3} alt="" />
         </div>
@@ -105,6 +113,7 @@ function Home() {
           <img src={Lata5} alt="" />
         </div>
       </section>
+
       <MyFooter>
         <div className="footer-left-container">
           <h3>Fale Conosco.</h3>
@@ -118,7 +127,6 @@ function Home() {
             <p>|</p>
             <p>REDES SOCIAIS</p>
           </div>  
-          <p className="copyright">Todos os direitos reservados © 2020 Conecta</p>
         </div>
         <div className="footer-right-container">
           <form>
@@ -136,8 +144,8 @@ function Home() {
             </div>
             <div className="subject-container flex-column">
               <label htmlFor="">ASSUNTO</label>
-              <select id="assunto" name="assunto" placeholder="Selecione um Assunto">
-                <option value="unmarked" disabled selected>Selecione um Assunto</option>
+              <select id="assunto" name="assunto">
+                <option value="unmarked">Selecione um Assunto</option>
                 <option value="option1">Opção 1</option>
                 <option value="option2">Opção 2</option>
                 <option value="option3">Opção 3</option>
@@ -146,14 +154,19 @@ function Home() {
             </div>
             <div className="message-container flex-column">
               <label htmlFor="">MENSAGEM</label>
-              <textarea name="mensagem" id="mensagem"></textarea>
+              <textarea name="mensagem" id="mensagem" placeholder="Escreva aqui sua mensagem"></textarea>
             </div>
           </form>
           <MyButton className="primary">Aqui um CTA</MyButton>
         </div>
-        <div className="footer-logo">
-          <p>PROJETADO POR</p>
-          <img src={MarcaFooter} alt="" />
+        <div className="footer-bottom-container">
+          <div className="footer-copyright-container">
+            <p className="copyright">Todos os direitos reservados © 2020 Conecta</p>
+          </div>
+          <div className="footer-logo">
+            <p>PROJETADO POR</p>
+            <img src={MarcaFooter} alt="" />
+          </div>
         </div>
       </MyFooter>
     </>

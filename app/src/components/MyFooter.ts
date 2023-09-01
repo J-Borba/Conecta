@@ -1,10 +1,16 @@
 import styled from 'styled-components'
 
 export const MyFooter = styled.footer `
-  display: flex;
+  display: grid;
+  padding: 0 10rem;
+  grid-template-areas: 
+    "left right"
+    "bottom bottom";
+
+  grid-template-columns: 50% 50%;
   position: relative;
   background-color: var(--black-100);
-  height: 100svh;
+  min-height: 100svh;
 
   h3, p, label{
     color: var(--white);
@@ -16,5 +22,15 @@ export const MyFooter = styled.footer `
   p{
     font-size: 0.75rem;
     font-family: sans-serif;
+  }
+
+  @media only screen and (max-width: 1168px) {
+    grid-template-areas:
+      "left"
+      "right"
+      "bottom";
+    grid-template-columns: 100%;
+    gap: 2rem;
+    padding: 5rem;
   }
 `

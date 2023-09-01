@@ -20,11 +20,14 @@
   bottom: 0;
   transform: translateY(30%);
 }
+.Lata4Mobile {
+  display: none;
+}
 .Lata5 {
   position: absolute;
   right: 10rem;
   bottom: 0;
-  transform: translateY(30%);
+  transform: translate(-50%, 25%);
   z-index: -1;
 }
 .Garrafa1 {
@@ -168,7 +171,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--green-500);
-  height: 18.125rem;
+  min-height: 18.125rem;
   gap: 1.5rem;
   p {
     font-weight: 800;
@@ -176,40 +179,35 @@
   }
 }
 .footer-left-container {
-  margin: 15.5rem 9.5rem auto 9.5rem;
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer-socials-wrapper {
   display: flex;
   gap: 1rem;
-  margin-top: 0.5rem;
 }
 .copyright {
   font-size: 0.75rem;
   opacity: 0.3;
-  position: absolute;
-  bottom: 3.5rem;
-  left: 9.5rem;
 }
 .footer-logo {
   display: flex;
   gap: 0.5rem;
-  position: absolute;
-  bottom: 3.5rem;
-  right: 9.5rem;
   align-items: center;
   p {
     font-size: 0.5625rem !important;
   }
 }
 .footer-right-container {
-  position: absolute;
-  top: 6rem;
-  right: 9rem;
+  grid-area: right;
   display: flex;
   gap: 2rem;
   flex-direction: column;
   align-items: end;
+  justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   form {
     display: grid;
@@ -274,7 +272,15 @@
 .message-container{
   grid-area: message;
 }
-
+.footer-bottom-container {
+  grid-area: bottom;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-wrapper {
+  text-align: center;
+}
 @media only screen and (max-width:1168px) {
   h1 {
     font-size: 3rem;
@@ -299,6 +305,49 @@
   }
   .grid-larger {
     background-position: -6rem;
+  }
+  .Lata3 {
+    left: 0.5rem;
+  }
+  .Lata4 {
+    left: 3rem;
+  }
+  .Lata5 {
+    // width: 25rem;
+    img {
+      max-width: 100%;
+    }
+    right: 0;
+    top: 0;
+    transform: translate(-15%, -10%);
+  }
+  .footer-left-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h3 {
+      font-size: 2.2rem !important;
+    }
+  }
+  .footer-right-container{
+    display: block;
+    button {
+      width: 100%;
+    }
+    form{
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "name"
+      "phone"
+      "email"
+      "subject"
+      "message";
+    }
+  }
+  .footer-bottom-container {
+    flex-direction: column !important;
+    margin-top: 3rem;
+    gap: 2.5rem;
   }
 }
 
@@ -347,5 +396,22 @@
   }
   .grid-larger {
     background-position: 0;
+  }
+  .Lata4Mobile {
+    display: block;
+    position: relative;
+    transform: translateY(-25%);
+  }
+  .mobile-wrapper {
+    transform: translateY(-100%);
+  }
+  .Lata3 {
+    display: none;
+  }
+  .Lata4 {
+    display: none;
+  }
+  .Lata5 {
+    display: none;
   }
 }
