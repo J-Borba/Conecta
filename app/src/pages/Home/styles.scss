@@ -178,6 +178,7 @@
 .footer-left-container {
   margin: 15.5rem 9.5rem auto 9.5rem;
 }
+
 .footer-socials-wrapper {
   display: flex;
   gap: 1rem;
@@ -201,6 +202,79 @@
     font-size: 0.5625rem !important;
   }
 }
+.footer-right-container {
+  position: absolute;
+  top: 6rem;
+  right: 9rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: end;
+  font-family: Arial, Helvetica, sans-serif;
+  form {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    "name name name"
+    "phone email email"
+    "subject subject subject"
+    "message message message";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  label {
+    color: var(--white) !important;
+    opacity: 0.296;
+    font-size: 0.75rem;
+  }
+  input, select, textarea {
+    background-color: var(--black-100);
+    padding: 0.8rem;
+    border: none;
+    border-top: 1px solid var(--white);
+    border-right: 1px solid var(--white);
+    outline: none;
+    color: var(--white);
+  }
+  select {
+    color: rgb(255, 255, 255, 0.50)
+  }
+  textarea {
+    resize: none;
+    height: 8.1875rem;
+  }
+  input:focus, textarea:focus {
+    transition: 0.2s;
+    background-color: rgb(255, 255, 255, 0.20);
+    border-top: 1px solid var(--green-500);
+    border-right: 1px solid var(--green-500);
+  }
+  select:focus {
+    transition: 0.2s;
+    border-top: 1px solid var(--green-500);
+    border-right: 1px solid var(--green-500);
+  }
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.56rem;
+}
+.name-container{
+  grid-area: name;
+}
+.phone-container{
+  grid-area: phone;
+}
+.email-container{
+  grid-area: email;
+}
+.subject-container{
+  grid-area: subject;
+}
+.message-container{
+  grid-area: message;
+}
+
 @media only screen and (max-width:1168px) {
   h1 {
     font-size: 3rem;

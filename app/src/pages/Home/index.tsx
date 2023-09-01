@@ -122,29 +122,38 @@ function Home() {
         </div>
         <div className="footer-right-container">
           <form>
-            <div>
+            <div className="name-container flex-column">
               <label htmlFor="">NOME</label>
-              <input type="text" name="nome" id="nome"/>
+              <input type="text" placeholder="Digite seu Nome" />
             </div>
-            <fieldset>
-              <div>
-                <label htmlFor="">TELEFONE</label>
-                <input type="text" name="telefone" id="telefone"/>
-              </div>
-              <div>
-                <label htmlFor="">E-MAIL</label>
-                <input type="email" name="email" id="email"/>
-              </div>
-            </fieldset>
-            <div>
+            <div className="phone-container flex-column">
+              <label htmlFor="">TELEFONE</label>
+              <input type="text" placeholder="(21) 00000-0000" />
+            </div>
+            <div className="email-container flex-column">
+              <label htmlFor="">E-MAIL</label>
+              <input type="email" placeholder="email@email.com.br" />
+            </div>
+            <div className="subject-container flex-column">
               <label htmlFor="">ASSUNTO</label>
-              <input type="search" />
+              <select id="assunto" name="assunto" placeholder="Selecione um Assunto">
+                <option value="unmarked" disabled selected>Selecione um Assunto</option>
+                <option value="option1">Opção 1</option>
+                <option value="option2">Opção 2</option>
+                <option value="option3">Opção 3</option>
+                <option value="option4">Opção 4</option>
+              </select>
+            </div>
+            <div className="message-container flex-column">
+              <label htmlFor="">MENSAGEM</label>
+              <textarea name="mensagem" id="mensagem"></textarea>
             </div>
           </form>
-          <div className="footer-logo">
-            <p>PROJETADO POR</p>
-            <img src={MarcaFooter} alt="" />
-          </div>
+          <MyButton className="primary">Aqui um CTA</MyButton>
+        </div>
+        <div className="footer-logo">
+          <p>PROJETADO POR</p>
+          <img src={MarcaFooter} alt="" />
         </div>
       </MyFooter>
     </>
