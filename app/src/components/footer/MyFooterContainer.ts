@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MyFooter = styled.footer `
+export const MyFooterContainer = styled.footer `
   display: grid;
   padding: 0 10rem;
   grid-template-areas: 
@@ -32,5 +32,8 @@ export const MyFooter = styled.footer `
     grid-template-columns: 100%;
     gap: 2rem;
     padding: 5rem;
+  }
+  @media only screen and (max-width: 680px) {
+    padding: 2rem;
   }
 `
